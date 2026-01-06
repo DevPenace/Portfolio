@@ -1,0 +1,125 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 20px;
+      background-color: #222;
+      color: #fff;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+    }
+
+    .menu-btn {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .menu-btn span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #333;
+      width: 100%;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    /* Telas maiores - exibe o menu horizontalmente */
+    @media (min-width: 768px) {
+      header {
+        flex-wrap: nowrap;
+      }
+
+      .menu-btn {
+        display: none;
+      }
+
+      nav {
+        display: flex !important;
+        flex-direction: row;
+        background: none;
+        width: auto;
+        padding: 0;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
+    .empresa-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.historia {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.historia h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.historia p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.imagem-empresa {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.imagem-empresa img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}

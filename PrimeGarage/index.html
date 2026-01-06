@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Prime Garage — Seminovos & Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">
+                <img src="img/logo.png" alt="Prime Garage">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="carrinho.html" class="cart-link"><i class="fa fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div id="user-area"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1>Prime Garage — Seu próximo carro começa aqui</h1>
+                    <p class="subtitle">Seminovos e premium selecionados com inspeção completa e garantia.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="catalogo.html">Explorar Catálogo</a>
+                        <a class="btn btn-outline" href="sobre.html">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/carro destaque sem fundo.png" alt="Carro destaque">
+                </div>
+            </div>
+        </section>
+
+        <section class="destaques container">
+            <h2>Em destaque</h2>
+            <div id="cards-destaque" class="cards-grid">
+                <!-- Cards preenchidos por JS -->
+            </div>
+        </section>
+
+        <section id="sobre" class="diferenciais container">
+            <h2>Por que escolher a Prime Garage?</h2>
+            <div class="grid-3">
+                <div class="card-diff"><i class="fa fa-check-circle"></i><h3>Inspeção rigorosa</h3><p>Todos os veículos passam por checagem completa.</p></div>
+                <div class="card-diff"><i class="fa fa-shield-alt"></i><h3>Garantia</h3><p>Planos de garantia para sua tranquilidade.</p></div>
+                <div class="card-diff"><i class="fa fa-star"></i><h3>Seleção premium</h3><p>Modelos exclusivos e seminovos de alto padrão.</p></div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato container">
+            <h2>Fale conosco</h2>
+            <p>Telefone: (00) 0 0000-0000 • E-mail: contato@primegarage.com</p>
+            <div class="socials">
+                <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" aria-label="Linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <p>© Prime Garage — Todos os direitos reservados.</p>
+            </div>
+            <div>
+                <small>Desenvolvido para portfólio • Design premium</small>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

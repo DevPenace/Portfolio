@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Doces</title>
+    <link rel="stylesheet" href="doces.css">
+    <style>
+        .receita {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+ 
+<h1>Doces</h1>
+ 
+<button onclick="mostrarReceita('brigadeiro')">1. Brigadeiro</button><br>
+<div id="brigadeiro" class="receita">
+    <p><strong>Ingredientes:</strong><br>
+    2 latas de leite condensado<br>
+    2 colheres (sopa) de manteiga<br>
+    6 colheres (sopa) de chocolate em pó<br>
+    Chocolate granulado para enrolar</p>
+    <p><strong>Modo de preparo:</strong><br>
+    Cozinhe todos os ingredientes em fogo baixo até desgrudar do fundo. Deixe esfriar, enrole e passe no granulado.</p>
+</div>
+ 
+<button onclick="mostrarReceita('beijinho')">2. Beijinho</button><br>
+<div id="beijinho" class="receita">
+    <p><strong>Ingredientes:</strong><br>
+    2 latas de leite condensado<br>
+    2 colheres (sopa) de manteiga<br>
+    150g de coco ralado<br>
+    Açúcar cristal ou coco para enrolar</p>
+    <p><strong>Modo de preparo:</strong><br>
+    Misture os ingredientes em fogo baixo até soltar do fundo. Esfrie, enrole e passe no açúcar ou coco.</p>
+</div>
+ 
+<button onclick="mostrarReceita('cajuzinho')">3. Cajuzinho</button><br>
+<div id="cajuzinho" class="receita">
+    <p><strong>Ingredientes:</strong><br>
+    2 xícaras de amendoim torrado e moído<br>
+    1 lata de leite condensado<br>
+    1/2 xícara de chocolate em pó<br>
+    Açúcar cristal para enrolar</p>
+    <p><strong>Modo de preparo:</strong><br>
+    Misture tudo até dar ponto. Modele em formato de cajuzinho e passe no açúcar.</p>
+</div>
+ 
+<button onclick="mostrarReceita('quindim')">4. Quindim</button><br>
+<div id="quindim" class="receita">
+    <p><strong>Ingredientes:</strong><br>
+    10 gemas<br>
+    2 xícaras de açúcar<br>
+    2 colheres (sopa) de manteiga<br>
+    1 xícara de coco ralado</p>
+    <p><strong>Modo de preparo:</strong><br>
+    Misture tudo e leve ao forno em forminhas untadas com açúcar até dourar.</p>
+</div>
+ 
+<button onclick="mostrarReceita('pudim')">5. Pudim de Leite</button><br>
+<div id="pudim" class="receita">
+    <p><strong>Ingredientes:</strong><br>
+    1 lata de leite condensado<br>
+    2 latas de leite<br>
+    3 ovos<br>
+    1 xícara de açúcar (para calda)</p>
+    <p><strong>Modo de preparo:</strong><br>
+    Faça a calda caramelizada e despeje na forma. Bata os ingredientes do pudim e asse em banho-maria.</p>
+</div>
+ 
+<button onclick="mostrarReceita('mousse')">6. Mousse de Maracujá</button><br>
+<div id="mousse" class="receita">
+    <p><strong>Ingredientes:</strong><br>
+    1 lata de leite condensado<br>
+    1 lata de creme de leite<br>
+    1 medida de suco de maracujá concentrado</p>
+    <p><strong>Modo de preparo:</strong><br>
+    Bata tudo no liquidificador e leve à geladeira até firmar.</p>
+</div> 
+<script src="js/salgadoedoces.js"></script>
+</body>
+</html>

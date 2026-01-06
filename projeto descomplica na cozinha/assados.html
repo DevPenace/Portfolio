@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assados</title>
+    <link rel="stylesheet" href="css/salgados.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Assados</h1>
+    </header>
+    <main>
+        <h3>Receitas Assadas</h3>
+
+        <button onclick="mostrarReceita('receita1')">1. Couve-flor assada com queijo e ervas</button><br>
+        <div id="receita1" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 couve-flor média</li>
+                <li>2 colheres (sopa) de azeite</li>
+                <li>1 colher (chá) de alho picado</li>
+                <li>Sal e pimenta a gosto</li>
+                <li>1/2 xícara de queijo parmesão ralado</li>
+                <li>Ervas finas a gosto (orégano, tomilho, manjericão)</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Pré-aqueça o forno a 200°C.</li>
+                <li>Corte a couve-flor em floretes médios.</li>
+                <li>Tempere com azeite, alho, sal, pimenta e ervas.</li>
+                <li>Distribua em uma assadeira e polvilhe o queijo parmesão por cima.</li>
+                <li>Asse por 25 a 30 minutos ou até dourar levemente.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita2')">2. Frango assado com mel e mostarda</button><br>
+        <div id="receita2" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 kg de coxas e sobrecoxas de frango</li>
+                <li>2 colheres (sopa) de mostarda dijon</li>
+                <li>2 colheres (sopa) de mel</li>
+                <li>1 dente de alho picado</li>
+                <li>Suco de 1 limão</li>
+                <li>Sal e pimenta a gosto</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Misture a mostarda, mel, alho e limão em uma tigela.</li>
+                <li>Tempere o frango com sal, pimenta e a marinada.</li>
+                <li>Deixe marinar por pelo menos 30 minutos.</li>
+                <li>Asse em forno preaquecido a 200°C por cerca de 45 minutos, virando na metade do tempo.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita3')">3. Batatas rústicas assadas com alecrim e páprica</button><br>
+        <div id="receita3" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>4 batatas grandes cortadas em gomos</li>
+                <li>2 colheres (sopa) de azeite</li>
+                <li>1 colher (chá) de páprica doce ou defumada</li>
+                <li>1 colher (chá) de alecrim seco</li>
+                <li>Sal e pimenta a gosto</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Pré-aqueça o forno a 220°C.</li>
+                <li>Em uma tigela, misture todos os ingredientes.</li>
+                <li>Distribua os gomos em uma assadeira forrada com papel manteiga.</li>
+                <li>Asse por 35 a 40 minutos, virando na metade do tempo.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita4')">4. Pão de alho recheado assado</button><br>
+        <div id="receita4" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 pão italiano ou baguete</li>
+                <li>3 colheres (sopa) de manteiga</li>
+                <li>2 dentes de alho amassados</li>
+                <li>1/2 xícara de queijo mussarela ralado</li>
+                <li>Salsinha picada a gosto</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Pré-aqueça o forno a 180°C.</li>
+                <li>Corte o pão em cruz sem chegar ao fundo.</li>
+                <li>Derreta a manteiga e misture com alho e salsinha.</li>
+                <li>Recheie os cortes do pão com a mistura e queijo.</li>
+                <li>Enrole em papel alumínio e asse por 15 minutos. Retire o papel e doure por mais 5 minutos.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita5')">5. Salmão assado com crosta de ervas e limão</button><br>
+        <div id="receita5" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>2 filés grandes de salmão</li>
+                <li>1 colher (sopa) de raspas de limão</li>
+                <li>1 colher (sopa) de suco de limão</li>
+                <li>1/2 xícara de farinha de rosca</li>
+                <li>2 colheres (sopa) de ervas frescas picadas</li>
+                <li>2 colheres (sopa) de azeite</li>
+                <li>Sal e pimenta a gosto</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Pré-aqueça o forno a 200°C.</li>
+                <li>Misture farinha de rosca com raspas, ervas e azeite.</li>
+                <li>Tempere os filés com sal, pimenta e suco de limão.</li>
+                <li>Pressione a crosta sobre os filés.</li>
+                <li>Asse por 15 a 20 minutos.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita6')">6. Carne de panela assada com legumes</button><br>
+        <div id="receita6" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1,2 kg de acém ou músculo</li>
+                <li>2 cenouras em rodelas</li>
+                <li>2 batatas em cubos</li>
+                <li>1 cebola em pétalas</li>
+                <li>2 dentes de alho picados</li>
+                <li>1 xícara de caldo de carne</li>
+                <li>1/2 xícara de vinho tinto (opcional)</li>
+                <li>Sal, pimenta e azeite</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Tempere e sele a carne.</li>
+                <li>Coloque em assadeira com os legumes e líquidos.</li>
+                <li>Cubra com alumínio e asse por 1h30 a 180°C.</li>
+                <li>Retire o papel e doure por mais 20 minutos.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita7')">7. Abóbora assada com especiarias</button><br>
+        <div id="receita7" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>500 g de abóbora cabotiá ou moranga</li>
+                <li>2 colheres (sopa) de azeite</li>
+                <li>1 colher (chá) de cominho</li>
+                <li>1 colher (chá) de páprica</li>
+                <li>Sal e pimenta a gosto</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Tempere os cubos de abóbora com tudo.</li>
+                <li>Asse por 35 a 40 minutos a 200°C, mexendo na metade.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita8')">8. Lasanha de berinjela assada</button><br>
+        <div id="receita8" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>2 berinjelas grandes em fatias</li>
+                <li>2 xícaras de molho de tomate</li>
+                <li>2 xícaras de queijo mussarela ralado</li>
+                <li>1/2 xícara de parmesão ralado</li>
+                <li>Azeite, sal e orégano</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Grelhe as fatias de berinjela.</li>
+                <li>Monte camadas com molho e queijos.</li>
+                <li>Asse por 30 minutos a 200°C até gratinar.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita9')">9. Costelinha suína assada com barbecue</button><br>
+        <div id="receita9" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>1 kg de costelinha suína</li>
+                <li>1 colher (sopa) de alho em pó</li>
+                <li>1 colher (chá) de sal</li>
+                <li>Pimenta-do-reino a gosto</li>
+                <li>Molho barbecue a gosto</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Tempere e asse coberto por 1h30 a 180°C.</li>
+                <li>Retire o papel, pincele molho e doure por mais 20 minutos.</li>
+            </ol>
+        </div><br>
+
+        <button onclick="mostrarReceita('receita10')">10. Torta de frango assada com massa crocante</button><br>
+        <div id="receita10" class="receita">
+            <p><strong>Ingredientes:</strong></p>
+            <ul>
+                <li>2 xícaras de frango desfiado</li>
+                <li>1 cebola picada</li>
+                <li>1 tomate picado</li>
+                <li>1 lata de milho</li>
+                <li>1/2 copo de requeijão</li>
+                <li>Massa pronta para torta</li>
+                <li>Sal, pimenta e cheiro-verde</li>
+            </ul>
+            <p><strong>Modo de preparo:</strong></p>
+            <ol>
+                <li>Refogue os ingredientes do recheio.</li>
+                <li>Monte na forma com a massa e asse por 35 a 40 minutos a 200°C.</li>
+            </ol>
+        </div><br>
+        <script src="js/salgadoedoces.js"></script>
+    </main>
+</body>
+</html>

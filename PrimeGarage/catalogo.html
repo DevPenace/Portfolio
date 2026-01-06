@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Catálogo — Prime Garage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="Prime Garage"></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="carrinho.html" class="cart-link"><i class="fa fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+        </ul>
+      </nav>
+      <div id="user-area"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Catálogo</h1>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <button id="filter-toggle" class="btn btn-outline">Filtrar</button>
+        <div id="filter-panel" class="filter-panel">
+          <form id="filter-form" class="filters">
+            <input class="input" name="q" placeholder="Buscar por modelo ou marca">
+            <select name="brand" class="input">
+              <option value="">Todas as marcas</option>
+            </select>
+            <input class="input" name="minYear" placeholder="Ano mínimo" type="number">
+            <input class="input" name="maxYear" placeholder="Ano máximo" type="number">
+            <input class="input" name="minPrice" placeholder="Preço mínimo" type="number">
+            <input class="input" name="maxPrice" placeholder="Preço máximo" type="number">
+            <div style="display:flex; gap:8px; margin-top:8px;">
+              <button class="btn btn-primary" type="submit">Aplicar</button>
+              <button id="filter-reset" type="button" class="btn btn-outline">Limpar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <section id="catalog-list" class="cards-grid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© Prime Garage</div>
+      <div><small>Portfólio</small></div>
+    </div>
+  </footer>
+</body>
+</html>
