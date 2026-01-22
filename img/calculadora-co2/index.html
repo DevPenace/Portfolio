@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de CO₂</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <h1>🌍 CO₂</h1>
+                <p>Calculadora de Emissões</p>
+            </div>
+
+            <div class="sidebar-controls">
+                <div class="stats-compact">
+                    <div>
+                        <div class="label">Viagens</div>
+                        <div id="totalTripsSmall" class="value">0</div>
+                    </div>
+                    <div>
+                        <div class="label">CO₂ (kg)</div>
+                        <div id="totalEmissionsSmall" class="value">0</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-actions">
+                    <button id="exportBtnSmall" class="btn btn-secondary">Exportar CSV</button>
+                    <button id="copyBtnSmall" class="btn btn-secondary">Copiar</button>
+                </div>
+
+                <div class="theme-wrap">
+                    <label class="theme-toggle" for="themeToggle">
+                        <input id="themeToggle" type="checkbox" aria-label="Ativar modo escuro">
+                        <span class="toggle-track" aria-hidden="true"></span>
+                    </label>
+                    <small>Modo escuro</small>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-area">
+            <header class="topbar">
+                <div>
+                    <h2>Calculadora de Emissões de CO₂</h2>
+                    <p class="muted">Registre suas viagens e acompanhe sua pegada de carbono</p>
+                </div>
+            </header>
+            <!-- Seção de Entrada -->
+            <section class="input-section">
+                <h2>Registrar Nova Viagem</h2>
+                
+                <div class="form-group">
+                    <label for="distance">Distância (km):</label>
+                    <input 
+                        type="number" 
+                        id="distance" 
+                        placeholder="Informe a distância em quilômetros" 
+                        min="0" 
+                        step="0.1"
+                        aria-label="Distância em quilômetros"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="transport">Tipo de Transporte:</label>
+                    <select id="transport" aria-label="Tipo de transporte" required>
+                        <option value="">-- Selecione um transporte --</option>
+                        <option value="carro_gasolina">Carro a Gasolina (0.21 kg CO₂/km)</option>
+                        <option value="carro_diesel">Carro a Diesel (0.19 kg CO₂/km)</option>
+                        <option value="carro_eletrico">Carro Elétrico (0.05 kg CO₂/km)</option>
+                        <option value="moto">Motocicleta (0.08 kg CO₂/km)</option>
+                        <option value="onibus">Ônibus (0.09 kg CO₂/km)</option>
+                        <option value="trem">Trem (0.04 kg CO₂/km)</option>
+                        <option value="bicicleta">Bicicleta (0.00 kg CO₂/km)</option>
+                        <option value="a_pe">A Pé (0.00 kg CO₂/km)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descrição (opcional):</label>
+                    <input 
+                        type="text" 
+                        id="description" 
+                        placeholder="Ex: Viagem para o trabalho, passeio, etc."
+                        aria-label="Descrição da viagem"
+                    >
+                </div>
+
+                <button id="addBtn" class="btn btn-primary">Adicionar Viagem</button>
+            </section>
+
+            <!-- Seção de Estatísticas (principal) -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total de Viagens</h3>
+                        <p class="stat-value" id="totalTrips">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Distância Total</h3>
+                        <p class="stat-value" id="totalDistance">0 km</p>
+                    </div>
+                    <div class="stat-card highlight">
+                        <h3>CO₂ Total Emitido</h3>
+                        <p class="stat-value" id="totalEmissions">0 kg</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Média por Viagem</h3>
+                        <p class="stat-value" id="avgEmissions">0 kg</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Lista de Viagens -->
+            <section class="trips-section">
+                <h2>Histórico de Viagens</h2>
+                <div id="tripsList" class="trips-list">
+                    <p class="empty-message">Nenhuma viagem registrada ainda. Adicione sua primeira viagem!</p>
+                </div>
+            </section>
+
+            <!-- Seção de Ações -->
+            <section class="actions-section">
+                <button id="clearBtn" class="btn btn-danger">Limpar Histórico</button>
+                <button id="shareBtn" class="btn btn-secondary">Compartilhar</button>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>💚 Juntos podemos fazer a diferença para o nosso planeta</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

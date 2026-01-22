@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos — Camila Penace</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 class="brand">Camila <span class="surname">Penace</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projects.html">Projetos</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="projects" class="projects-section">
+            <h2>Projetos</h2>
+            <div class="project-list">
+                <article class="project-card" data-title="PrimeGarage" data-desc="Prime Garage é um site desenvolvido para marcas do segmento automotivo premium, com foco em desempenho, clareza e experiência do usuário. O projeto utiliza tecnologias web modernas para garantir carregamento rápido, layout responsivo e navegação intuitiva. A estrutura foi pensada para valorizar o visual, facilitar a interação do usuário e oferecer uma base sólida, escalável e pronta para evoluções futuras." data-date="Desenvolvido em Dezembro de 2025"   data-href="PrimeGarage/index.html" target="_blank" data-img="img/PrimeGarage.png">
+                    <img class="project-thumb" src="img/PrimeGarage.png" alt="PrimeGarage"/>
+                    <h3 class="project-title">PrimeGarage</h3>
+                </article>
+
+                <article class="project-card" data-title="Receitas da Mama" data-desc="Receitas da Mama é um site de receitas desenvolvido para preservar e compartilhar receitas tradicionais da família, unindo tecnologia e valor afetivo. O projeto conta com design responsivo, barra de pesquisa para facilitar a navegação e uma interface simples e acolhedora, pensada para oferecer uma experiência intuitiva em qualquer dispositivo." data-date="Desenvolvido em agosto de 2025"       data-href="receitas da mama/receitas da mama/index.html" target="_blank" data-img="img/ReceitasdaMama.png">
+                    <img class="project-thumb" src="img/ReceitasdaMama.png" alt="Receitas da Mama"/>
+                    <h3 class="project-title">Receitas da Mama</h3>
+                </article>
+
+                <article class="project-card" data-title="TradutorIA" data-desc="Esse projeto é um tradutor inteligente que permite converter texto e fala em tempo real para vários idiomas, focando em praticidade, acessibilidade e experiência do usuário. A aplicação reconhece a voz do usuário, transforma o áudio em texto, realiza a tradução automaticamente e entrega o resultado de forma clara e rápida." data-href="Tradutor IA/index.html" data-date="Desenvolvido em janeiro de 2026" target="_blank" data-img="img/TradutorIA.png">
+                    <img class="project-thumb" src="img/TradutorIA.png" alt="TradutorIA"/>
+                    <h3 class="project-title">TradutorIA</h3>
+                </article>
+
+                <article class="project-card" data-title="Lista de Compras" data-desc="Este é um app de lista de compras interativo desenvolvido com HTML, CSS e JavaScript. Ele permite que o usuário adicione itens dinamicamente e gerencie sua lista através de botões de exclusão individuais para cada produto. O projeto destaca o uso de manipulação de DOM para criar uma interface limpa, onde a lixeira só aparece quando há itens presentes, garantindo uma experiência de usuário organizada e responsiva." data-href="Lista de Compras/index.html" data-date="Desenvolvido em janeiro de 2026" target="_blank" data-img="img/ListaDeCompras.png">
+                    <img class="project-thumb" src="img/ListaDeCompras.png" alt="Lista de Compras"/>
+                    <h3 class="project-title">Lista de Compras</h3>
+                </article>
+                <article class="project-card" data-title="Beto´s Pizzaria" data-desc="A Beto´s Pizzaria é um site desenvolvido para apresentação de cardápio, informações da pizzaria e facilitação do contato com os clientes. O layout é responsivo, com navegação simples e intuitiva, permitindo a visualização dos sabores, descrições dos produtos e acesso rápido aos principais pontos do site. O projeto foca em usabilidade, organização visual e boa experiência do usuário em diferentes dispositivos, garantindo praticidade e desempenho." data-href="pizzaria 2.0/index.html" data-date="Desenvolvido em janeiro de 2026" target="_blank" data-img="img/Beto pizzaria.png">
+                    <img class="project-thumb" src="img/Beto pizzaria.png" alt="Betos Pizzaria"/>
+                    <h3 class="project-title">Beto´s Pizzaria</h3>
+                </article>
+                
+            </div>
+
+            <!-- Modal de detalhes do projeto -->
+            <div id="project-modal" class="modal" aria-hidden="true">
+                <div class="modal-overlay" id="modal-overlay"></div>
+                <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                    <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+                    <div class="modal-left">
+                        <img id="modal-img" src="" alt="" class="modal-img"/>
+                    </div>
+                    <div class="modal-right">
+                        <h3 id="modal-title"></h3>
+                        <p id="modal-desc"></p>
+                        <p class="modal-date" id="modal-date"></p>
+                        <div class="modal-actions">
+                            <a id="modal-link" class="btn primary" rel="noopener">Acessar projeto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Camila Penace — Desenvolvedora Web</p>
+    </footer>
+    <script>
+        (function(){
+            const modal = document.getElementById('project-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const closeBtn = document.getElementById('modal-close');
+            const modalImg = document.getElementById('modal-img');
+            const modalTitle = document.getElementById('modal-title');
+            const modalDesc = document.getElementById('modal-desc');
+            const modalDate = document.getElementById('modal-date');
+            const modalLink = document.getElementById('modal-link');
+            const modalRepo = document.getElementById('modal-repo');
+            const modalLinkedin = document.getElementById('modal-linkedin');
+            let activeCard = null;
+
+            function setButtonState(btn, url, text){
+                if(!btn) return;
+                if(!url || url === '#'){
+                    btn.removeAttribute('href');
+                    btn.classList.add('disabled');
+                    btn.setAttribute('aria-disabled','true');
+                    btn.removeAttribute('target');
+                    btn.removeAttribute('rel');
+                    btn.textContent = text;
+                } else {
+                    btn.href = url;
+                    btn.classList.remove('disabled');
+                    btn.removeAttribute('aria-disabled');
+                    // abrir links em nova aba por padrão e usar rel seguro
+                    btn.target = '_blank';
+                    btn.rel = 'noopener noreferrer';
+                    btn.textContent = text;
+                }
+            }
+
+            function openModal(data){
+                modalImg.src = data.img || '';
+                modalImg.alt = data.title || '';
+                modalTitle.textContent = data.title || '';
+                modalDesc.textContent = data.desc || '';
+                modalDate.textContent = data.date || '';
+                setButtonState(modalLink, data.url, 'Acessar projeto');
+                setButtonState(modalRepo, data.repo, 'Acessar repositório');
+                setButtonState(modalLinkedin, data.linkedin, 'Ver post no Linkedin');
+                modal.setAttribute('aria-hidden','false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal(){
+                modal.setAttribute('aria-hidden','true');
+                document.body.style.overflow = '';
+                if(activeCard){
+                    activeCard.classList.remove('active-card');
+                    activeCard = null;
+                }
+            }
+
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    if(activeCard) activeCard.classList.remove('active-card');
+                    card.classList.add('active-card');
+                    activeCard = card;
+                    const data = {
+                        title: card.dataset.title,
+                        desc: card.dataset.desc,
+                        url: card.dataset.url || card.dataset.href,
+                        repo: card.dataset.repo,
+                        linkedin: card.dataset.linkedin,
+                        date: card.dataset.date,
+                        img: card.dataset.img
+                    };
+                    openModal(data);
+                });
+            });
+
+            overlay.addEventListener('click', closeModal);
+            closeBtn.addEventListener('click', closeModal);
+            document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+        })();
+    </script>
+</body>
+</html>

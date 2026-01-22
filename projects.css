@@ -1,0 +1,24 @@
+/* Copiado de style.css — estilos para a página projects */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --bg-1:#07070b;
+  --bg-2:#0f1724;
+  --muted:#9aa4b2;
+  --accent:#ff5a7a;
+  --glass:rgba(255,255,255,0.04);
+  --card:rgba(255,255,255,0.03);
+}
+
+body{
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:linear-gradient(180deg,var(--bg-1),var(--bg-2));
+  color:#e6eef8;
+  min-height:100vh;
+}
+
+/* restante do conteúdo igual ao style.css */
