@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Entrar / Cadastrar — Prime Garage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="Prime Garage"></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+      <div id="user-area"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="auth-card" class="auth-card card fade-in">
+      <div class="auth-login">
+        <h2>Entrar</h2>
+        <form id="login-form">
+          <label>E-mail<input name="email" class="input" type="email" required></label>
+          <label>Senha<input name="password" class="input" type="password" required></label>
+          <div style="margin-top:8px"><button class="btn btn-primary" type="submit">Entrar</button></div>
+        </form>
+        <p class="small-muted auth-switch">Não tem cadastro? <a href="#" id="show-register">Cadastre-se</a></p>
+      </div>
+
+      <div class="auth-register">
+        <h2>Cadastrar</h2>
+        <form id="register-form">
+          <label>Nome completo<input name="name" class="input" required></label>
+          <label>E-mail<input name="email" class="input" type="email" required></label>
+          <label>Senha<input name="password" class="input" type="password" required></label>
+          <div style="margin-top:8px"><button class="btn btn-outline" type="submit">Criar conta</button></div>
+        </form>
+        <p class="small-muted auth-switch">Já tem conta? <a href="#" id="show-login">Entrar</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function getQueryParam(name){ return new URLSearchParams(location.search).get(name); }
+
+    // Alterna entre telas
+    const authCard = document.getElementById('auth-card');
+    const showRegister = document.getElementById('show-register');
+    const showLogin = document.getElementById('show-login');
+    function openRegister(){ authCard.classList.add('registering'); window.scrollTo(0,0); }
+    function openLogin(){ authCard.classList.remove('registering'); window.scrollTo(0,0); }
+    if(showRegister) showRegister.addEventListener('click', (e)=>{ e.preventDefault(); openRegister(); });
+    if(showLogin) showLogin.addEventListener('click', (e)=>{ e.preventDefault(); openLogin(); });
+    if(getQueryParam('action') === 'register') openRegister();
+
+    document.getElementById('login-form').addEventListener('submit', function(e){ e.preventDefault(); const data = Object.fromEntries(new FormData(this).entries()); const res = loginUser({ email: data.email, password: data.password }); if(!res.ok){ alert(res.message); return; } renderUserArea(); const next = getQueryParam('next') || 'index.html'; window.location.href = next; });
+
+    document.getElementById('register-form').addEventListener('submit', function(e){ e.preventDefault(); const data = Object.fromEntries(new FormData(this).entries()); const res = registerUser({ name: data.name, email: data.email, password: data.password }); if(!res.ok){ alert(res.message); return; } renderUserArea(); const next = getQueryParam('next') || 'index.html'; window.location.href = next; });
+  </script>
+</body>
+</html>

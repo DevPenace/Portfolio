@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #F55B64;
+    --cor-secundaria: #C2373F;
+    --neutro: #F9F9F9;
+    --preto: #131730;
+    --fonte-titulo: "Krona One", sans-serif;
+    --fonte-texto: 'Numans', sans-serif;
+    --degrade-azul: linear-gradient(180deg, #000000 0%, #26327F 100%);
+}
+
+@keyframes gradienteAnimado {
+    0% {
+        background: linear-gradient(180deg, #000000 0%, #1a1f6b 100%);
+    }
+    25% {
+        background: linear-gradient(180deg, #050510 0%, #4a6fff 100%);
+    }
+    50% {
+        background: linear-gradient(180deg, #000000 0%, #7da3ff 100%);
+    }
+    75% {
+        background: linear-gradient(180deg, #0a0a1a 0%, #a8c5ff 100%);
+    }
+    100% {
+        background: linear-gradient(180deg, #000000 0%, #1a1f6b 100%);
+    }
+}
+
+body {
+    background: var(--degrade-azul);
+    background-attachment: fixed;
+    animation: gradienteAnimado 8s ease-in-out infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--neutro);
+    margin-top: 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 440px;
+    padding: 56px;
+
+    align-items: center;
+    border-radius: 16px;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+hr {
+    border: none;
+    border-bottom: 3px dotted var(--cor-primaria);
+    margin-bottom: 24px;
+}
+
+p {
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.input-item {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 24px;
+    border: 1px solid var(--preto);
+    width: 307px;
+
+    font-family: var(--fonte-texto);
+}
+
+.input-item::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.button-item {
+    padding: 12px 16px;
+    border-radius: 24px;
+    background-color: var(--cor-primaria);
+    color: var(--neutro);
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.button-limpar {
+    padding: 12px 16px;
+    border-radius: 24px;
+    background-color: var(--cor-primaria);
+    color: var(--neutro);
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-limpar:hover {
+    background-color: var(--preto);
+}
+
+.lista-item-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+x
+ul {
+    list-style-type: none;
+}
+
+.input-checkbox {
+    display: none;
+}
+
+.checkbox-customizado {
+    width: 20px;
+    height: 20px;
+    background-color: var(--neutro);
+    border: 1px solid var(--preto);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.checked {
+    background-color: var(--preto);
+    position: relative;
+}
+
+.checkbox-customizado.checked::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: -10%;
+    width: 5px;
+    height: 14px;
+
+    border-top: 2px solid var(--neutro);
+    border-left: 2px solid var(--neutro);
+
+    transform: rotate(-140deg);
+}
+
+.texto-data {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.item-lista-button {
+    border: none;
+    background-color: transparent;
+}
+
+.container-lista {
+    width: 100%;
+}
+
+.botao-lixeira-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icone-lixeira-item {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.botao-lixeira-item:hover .icone-lixeira-item {
+    transform: scale(1.1);
+}
+

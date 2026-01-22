@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <link rel="icon" href="img/icone.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="receitas.css">
+    <script src="receitas.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/icone.png" alt="Logo">
+            <h1>Receitas da Mama</h1>
+        </div>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="menu">
+            <a href="index.html">Início</a>
+            <a href="receitas.html">Receitas</a>
+        </nav>
+    </header>
+
+    <main style="padding: 20px; max-width: 1200px; margin: auto;">
+
+        <!-- 🔍 Barra de pesquisa -->
+        <input type="text" id="searchInput" placeholder="Buscar receita..." onkeyup="filtrarReceitas()">
+
+        <!-- 📜 Lista de receitas -->
+        <div class="receitas-grid">
+        <div class="receita">
+            <button onclick="toggleReceita('receita1')">Quiche</button>
+            <section id="receita1" class="conteudo-receita">
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                    <li>250g de farinha</li>
+                    <li>150g de manteiga</li>
+                    <li>1 ovo</li>
+                    <li>Sal a gosto</li>
+                </ul>
+                <p><strong>Modo de preparo:</strong></p>
+                <ol>
+                    <li>Coloque todos os ingredientes em uma tigela e misture com a mão.</li>
+                    <li>Quando a massa estiver homogênea coloque em uma forma da sua preferência.</li> 
+                </ol>
+            </section>
+        </div>
+
+        <div class="receita">
+            <button onclick="toggleReceita('receita2')">Pão com gotas de chocolate</button>
+            <section id="receita2" class="conteudo-receita">
+                <p><strong>Ingredientes:</strong></p>
+                <ul>
+                    <li>½ kg de farinha de trigo</li>
+                    <li>1 envelope de 10g de fermento biológico seco</li>
+                    <li>½ xícara de açúcar</li>
+                    <li>1 xícara de leite morno</li>
+                    <li>2 colheres de sopa de margarina</li>
+                    <li>3 ovos</li>
+                    <li>1 colher de sopa de sal</li>
+                    <li>100g de chocolate em barra picado</li>
+                    <li>1 gema</li>
+                    <li>1 colher de açúcar</li>
+                </ul>
+                <p><strong>Modo de preparo:</strong></p>
+                <ol>
+                    <li>No liquidificador, misture leite, fermento, ovos, margarina, açúcar e sal por 2 minutos.</li> 
+                    <li>Adicione à farinha e misture até a massa soltar das mãos.</li>
+                    <li>Sove por cerca de 15 minutos.</li>
+                    <li>Divida, recheie com chocolate e modele os pães.</li>
+                    <li>Deixe crescer até dobrar de tamanho. Pincele com gema e açúcar.</li>
+                    <li>Asse em forno médio por aproximadamente 30 minutos.</li>
+                </ol>
+            </section>
+        </div>
+        <div class="receita">
+          <button onclick="toggleReceita('receita3')">Torta de maracujá</button>
+          <section id="receita3" class="conteudo-receita">
+                <p><strong>Ingredientes:</strong></p>
+              <ul>
+                <li> 200g de biscoito maisena</li>
+                <li> 100g de margarina</li>
+                <li> 1 lata de leite condensado</li>
+                <li> 1 lata de creme de leite</li>
+                <li> polpa de maracujá</li>
+                <li> ½ xicara(chá) de açucar</li>
+                <li> 1 colher de chá de maisena</li>
+                <li> suco de maracujá</li>
+              </ul>
+                <p><strong>Modo de preparo</strong></p>
+                <ol>
+                <li>Triture o biscoito e o transfira para uma tigela, misture a margarina até formar uma massa homogênea.</li>
+                <li>Forre uma forma de aproximadamente 25 cm de diâmetro e de fundo removível com a massa de biscoito.</li>
+                <li>Leve ao forno alto, preaquecido, por 10 minutos ou até dourar. Tire a massa do forno e reserve.</li>
+                <li>Bata no liquidificador o leite condensado, o suco de maracujá (use a lata do leite condensado para medir) e o creme de leite </li>
+                <li>Coloque esse creme sobre a massa e leve à geladeira por 1 hora.</li>
+                <li>Para a cobertura leve ao fogo a polpa de um maracujá, açúcar e maisena, mexa sempre até levantar fervura.</li>
+                <li>Deixe esfriar, desenforme a torta, regue com a calda e sirva.</li>
+              </ol>
+            </section>
+            </div>
+            <div class="receita">
+              <button onclick="toggleReceita('receita4')">Bolo de cenoura</button>
+          <section id="receita4" class="conteudo-receita">
+                <p><strong>Ingredientes:</strong></p>
+              <ul>
+                <li>3 cenouras médias picadas</li>
+                <li>1 copo americano de óleo</li>
+                <li>2 xícaras de açúcar</li>
+                <li>1 colher de sopa de fermento em pó</li>
+                <li>3 xícaras de farinha de trigo</li>
+                <li>1 pitada de sal</li>
+                <li>3 ovos</li>
+                </ul>
+                <p><strong>Modo de preparo:</strong></p>
+                <ol>
+                  <li>Lave e raspe a casca de cada cenoura. Em seguida, corte-as em rodelas finas e coloque no liquidificador.</li>
+                  <li>Acrescente o óleo, o açúcar e os ovos. Bata por seis minutos, até obter uma massa líquida e homogênea.</li>
+                  <li>Em uma tigela, adicione a do bolo. Em seguida, acrescente a farinha e mexa bem, com o auxílio de um fuê. Siga mexendo a massa até obter uma mistura uniforme. Por fim, acrescente o fermento em pó e mexa um pouco mais.</li>
+                  <li>Unte uma assadeira com margarina e um pouco de farinha de trigo. Depois acrescente o bolo, leve ao forno e deixe assar por 30 minutos.</li>
+                </ol>
+              </section>
+            </div>
+            <div class="receita">
+                <button onclick="toggleReceita('receita5')">Cobertura para bolo de cenoura</button>
+          <section id="receita5" class="conteudo-receita">
+                <p><strong>Ingredientes:</strong></p>
+              <ul>
+                  <li>1 colher de sopa rasa de leite</li>
+                  <li>3 colheres de sopa de achocolatado em pó ou chocolate em pó</li>
+                  <li>1 colher de sopa de manteiga</li>
+                  <li>1 xícara de açúcar</li>
+                  </ul>
+                  <p><strong>Modo de preparo:</strong></p>
+                  <ol>
+                    <li>Misture todos os ingredientes em uma panela e leve ao fogo.</li>
+                    <li>Mecha bem até formar uma calda. Se vc quiser deixar a cobertura com uma consistência mais molinha, basta acrescentar mais 4 colheres de leite.</li>
+                    <li>Por fim fure a massa do bolo com o garfo e despeje a cobertura.</li>
+                  </ol>
+                </section>
+              </div>
+              <div class="receita">
+                  <button onclick="toggleReceita('receita6')">Queijadinha de arroz</button>
+                  <section id="receita6" class="conteudo-receita">
+                        <p><strong>Ingredientes:</strong></p>
+                      <ul>
+                        <li>1 xícara de chá de arroz</li>
+                        <li>1 xícara de chá de leite</li>
+                        <li>3 ovos</li>
+                        <li>½ xícara de chá de óleo</li>
+                        <li>1 xícara de açúcar</li>
+                        <li>50g de queijo parmesão ralado</li>
+                        <li>100g de coco seco</li>
+                        <li>1 colher de sopa de fermento em pó</li>
+                        <p><strong>Modo de preparo:</strong></p>
+                        <ol>
+                          <li>Junte o arroz e o leite e deixe reserve de um dia para o outro.</li>
+                          <li>No liquidificador coloque a mistura do leite e o arroz, depois junte os demais ingredientes e bata até formar uma mistura homogênea.</li>
+                          <li>Despeje em uma forma untada e enfarinhada e leve ao forno em 180°C de 30 a 40 minutos.</li>
+                        </ol>
+                      </section>
+                    </div>
+                    <div class="receita">
+                      <button onclick="toggleReceita('receita7')">Pão de mandioca</button>
+                      <section id="receita7" class="conteudo-receita">
+                            <p><strong>Ingredientes:</strong></p>
+                          <ul>
+                            <li>3 ovos</li>
+                            <li>1 copo de óleo</li>
+                            <li>1 copo de água morna</li>
+                            <li>100 g de açúcar</li>
+                            <li>1 colher rasa de sal</li>
+                            <li>3 tabletes de fermento biológico fresco</li>
+                            <li>500g de mandioca cozida sem as cascas e sem as fibras</li>
+                            <li>farinha de trigo até dar o ponto</li>
+                            </ul>
+                            <p><strong>Modo de preparo:</strong></p>
+                            <ol>
+                              <li>Bata no liquidificador os ovos, o óleo, a água, o açúcar, o sal, o fermento e acrescente aos poucos a mandioca</li>
+                              <li>Coloque a mistura em uma tigela, adicione a farinha de trigo, aos poucos, mexendo sempre com uma colher.</li>
+                              <li>quando ficar difícil de mexer transfira a massa para a mesa polvilhada com farinha e sove até que a massa fique lisa e homogênea</li>
+                              <li>deixe crescer até dobrar de tamanho.</li>
+                              <li>Unte uma forma com manteiga, abra a massa com o rolo e modele os pães de acordo com a sua preferência, pincele com gemas, leve ao forno em temperatura baixa e aumente para média somente pouco antes de começar a dourar.</li>
+                            </ol>
+                          </section>
+                        </div>
+                         <div class="receita">
+                  <button onclick="toggleReceita('receita8')">Bolo de chocolate vulcão</button>
+                  <section id="receita8" class="conteudo-receita">
+                        <p><strong>Ingredientes:</strong></p>
+                       
+                      <ul>
+                         <b>Massa</b>
+                        <li>1 xicara de chá de leite morno</li>
+                        <li>3 ovos</li>
+                        <li>4 colheres (sopa) de margarina derretida</li>
+                        <li>2 xicaras de chá de açucar</li>
+                        <li>1 xicara de chá de chocolate em pó</li>
+                        <li>2 xicaras de chá de farinha de trigo</li>
+                        <li>1 colher de sopa de fermento em pó</li>
+                        <b>Cobertura</b>
+                        <li>300g de chocolate meio amargo</li>
+                        <li>300ml de bebida lactea de chocolate</li>
+                        <li>cacau em pó para povilhar</li>
+                      </ul>
+                      <p><strong>Modo de preparo:</strong></p>
+                      <ol>
+                        <li>Bata todos os ingredientes da massa, exceto o fermento</li>
+                        <li>Em seguida bata o fermento apenas para misturar</li>
+                        <li>Leve para assar em uma forma untada de buraco de 24 de diâmetro a 180ºC por aproximadamente 40 minutos</li>
+                        <li>Para fazer a cobertura derreta o chocolate e misture com a bebida</li>
+                      </ol>
+                  </section>
+                </div>
+                <div class="receita">
+                <button onclick="toggleReceita('receita9')">Lasanha de carne moída</button>
+                <section id="receita9" class="conteudo-receita">
+                <p><strong>Ingredientes:</strong></p>
+              <ul>
+                <li>500g de carne moída</li>
+                <li>1 pacote de massa para lasanha</li>
+                <li>1 lata de molho de tomate</li>
+                <li>300g de presunto</li>
+                <li>300g de queijo mussarela</li>
+                <li>Sal e temperos a gosto</li>
+              </ul>
+
+                <p><strong>Modo de preparo:</strong></p>
+             <ol>
+               <li>Refogue a carne com os temperos</li>
+              <li>Adicione o molho de tomate</li>
+              <li>Monte a lasanha intercalando camadas</li>
+              <li>Leve ao forno a 180ºC por 40 minutos</li>
+             </ol>
+            </section>
+             </div>
+             <div class="receita">
+              <button onclick="toggleReceita('receita10')">Brigadeiro gourmet</button>
+              <section id="receita10" class="conteudo-receita">
+              <p><strong>Ingredientes:</strong></p>
+            <ul>
+              <li>1 lata de leite condensado</li>
+              <li>100g de chocolate meio amargo</li>
+              <li>1 colher (sopa) de manteiga</li>
+              <li>Chocolate granulado</li>
+            </ul>
+              <p><strong>Modo de preparo:</strong></p>
+            <ol>
+          <li>Leve tudo ao fogo baixo</li>
+          <li>Mexa até desgrudar do fundo</li>
+          <li>Deixe esfriar</li>
+          <li>Enrole e passe no granulado</li>
+        </ol>
+      </section>
+             </div>
+             <div class="receita">
+              <button onclick="toggleReceita('receita11')">Strogonoff de frango</button>
+              <section id="receita11" class="conteudo-receita">
+              <p><strong>Ingredientes:</strong></p>
+            <ul>
+              <li>500g de peito de frango em cubos</li>
+              <li>1 caixa de creme de leite</li>
+              <li>2 colheres (sopa) de ketchup</li>
+              <li>1 colher (sopa) de mostarda</li>
+              <li>1 cebola picada</li>
+            </ul>
+              <p><strong>Modo de preparo:</strong></p>
+            <ol>
+              <li>Refogue o frango com a cebola</li>
+              <li>Adicione ketchup e mostarda</li>
+              <li>Desligue o fogo e acrescente o creme de leite</li>
+              <li>Sirva com arroz e batata palha</li>
+            </ol>
+          </section>
+             </div>
+             <div class="receita">
+              <button onclick="toggleReceita('receita12')">Pizza de frigideira</button>
+              <section id="receita12" class="conteudo-receita">
+              <p><strong>Ingredientes:</strong></p>
+            <ul>
+              <li>1 xícara de chá de farinha de trigo</li>
+              <li>1 colher (chá) de fermento</li>
+              <li>1/2 xícara de chá de leite</li>
+              <li>1 colher (sopa) de óleo</li>
+              <li>Molho de tomate</li>
+              <li>Recheio a gosto</li>
+            </ul>
+              <p><strong>Modo de preparo:</strong></p>
+            <ol>
+              <li>Misture os ingredientes da massa</li>
+              <li>Coloque em frigideira untada</li>
+              <li>Espalhe o molho e o recheio</li>
+              <li>Tampe até o queijo derreter</li>
+            </ol>
+          </section>
+             </div>
+             <div class="receita">
+              <button onclick="toggleReceita('receita13')">Mousse de maracujá</button>
+              <section id="receita13" class="conteudo-receita">
+              <p><strong>Ingredientes:</strong></p>
+            <ul>
+              <li>1 lata de leite condensado</li>
+              <li>1 caixa de creme de leite</li>
+              <li>1 xícara de suco concentrado de maracujá</li>
+            </ul>
+
+            <p><strong>Modo de preparo:</strong></p>
+          <ol>
+            <li>Bata tudo no liquidificador</li>
+            <li>Coloque em taças</li>
+            <li>Leve à geladeira por 2 horas</li>
+            <li>Sirva gelado</li>
+          </ol>
+        </section>
+             </div>
+             <div class="receita">
+              <button onclick="toggleReceita('receita14')">Coxinha de frango</button>
+              <section id="receita14" class="conteudo-receita">
+              <p><strong>Ingredientes:</strong></p>
+            <ul>
+              <li>500g de frango desfiado</li>
+              <li>2 xícaras de caldo de frango</li>
+              <li>2 xícaras de farinha de trigo</li>
+              <li>Temperos a gosto</li>
+            </ul>
+
+              <p><strong>Modo de preparo:</strong></p>
+            <ol>
+              <li>Ferva o caldo e adicione a farinha</li>
+              <li>Misture até soltar da panela</li>
+              <li>Recheie com o frango</li>
+              <li>Frite até dourar</li>
+            </ol>
+          </section>
+             </div>
+        </div>
+    </main>    
+</body>
+</html>
+
